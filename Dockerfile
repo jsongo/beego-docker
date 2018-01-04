@@ -6,5 +6,6 @@ RUN apk add --no-cache git \
     && go get github.com/beego/bee \
     && apk del git
 
-ONBUILD COPY main /usr/bin/
-ONBUILD ENTRYPOINT /usr/bin/main
+VOLUME /code
+WORKDIR /code
+ENTRYPOINT bee run
