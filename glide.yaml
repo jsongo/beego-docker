@@ -1,9 +1,10 @@
-package: techzto.com/bee-graphql
+package: .
 import:
 - package: github.com/astaxie/beego
   version: v1.9.2
   subpackages:
   - context
+- package: github.com/beego/bee
 - package: github.com/go-sql-driver/mysql
   version: v1.3
 - package: github.com/neelance/graphql-go
