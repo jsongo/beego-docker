@@ -8,7 +8,7 @@ WORKDIR /go/src
 COPY glide.yaml /
 RUN apk add --no-cache git \
     && go get github.com/Masterminds/glide \
-    && glide install --yaml /glide.yaml
+    && glide --yaml /glide.yaml install
     # && apk del git
 
 COPY entrypoint.sh /
