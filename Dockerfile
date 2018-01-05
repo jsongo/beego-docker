@@ -6,8 +6,8 @@ ENV GOPATH /go
 WORKDIR /go/src
 
 RUN apk add --no-cache git \
-    && go get github.com/astaxie/beego \
-    && go get github.com/beego/bee \
+    && go get github.com/Masterminds/glide \
+    && glide install \
     && apk del git
 
 COPY entrypoint.sh /
