@@ -6,5 +6,6 @@ import:
   - context
 - package: github.com/go-sql-driver/mysql
   version: v1.3
+- package: github.com/opentracing/opentracing-go
 - package: github.com/neelance/graphql-go
 
