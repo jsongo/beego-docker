@@ -1,3 +1,5 @@
 export codePath=${CODE_PATH:-main}
-mv /go/src/main /go/src/$codePath
+mkdir -p ${codePath%/*}
+mv ./main ./${codePath}
+ls -ahl
 bee run $codePath
