@@ -1,9 +1,8 @@
 package: .
 import:
+- package: golang.org/x/net/context
 - package: github.com/astaxie/beego
   version: v1.9.2
-  subpackages:
-  - context
 - package: github.com/go-sql-driver/mysql
   version: v1.3
 - package: github.com/opentracing/opentracing-go
