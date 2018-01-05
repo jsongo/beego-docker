@@ -7,7 +7,6 @@ WORKDIR /go/src
 
 COPY glide.yaml /
 RUN apk add --no-cache git \
-    && go get github.com/astaxie/beego \
     && go get github.com/beego/bee \
     && go get github.com/Masterminds/glide
 RUN glide --yaml /glide.yaml install
