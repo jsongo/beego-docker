@@ -9,5 +9,6 @@ RUN apk add --no-cache git \
     && go get github.com/beego/bee \
     && apk del git
 
+COPY entrypoint.sh /
 ONBUILD COPY . /go/src/main
-ONBUILD ENTRYPOINT ["bee", "run", "main"]
+ONBUILD ENTRYPOINT ["ash", "/entrypoint.sh"]
